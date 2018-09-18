@@ -1,0 +1,22 @@
+variables:
+  APP_HOME: $DATA_DIR/assets/merchant.shangfudata.com/cashier-template
+
+stages:
+- deploy
+
+before_script:
+- npm i -g yarn
+- cd common && yarn install
+- cd ../cashier-webapp && yarn install
+
+after_script:
+- rm -rf $RSA_DIR
+
+生产环境部署:
+  stage: deploy
+  only:
+  - master
+  script:
+  - yarn prod
+  - mkdir -p $RSA_DIR && chmod 700 $RSA_DIR && echo -e $PRK > $RSA_FILE && chmod 600 $RSA_FILE
+  - scp -r $SSH_ARGS build/app/* $PRODUCTION_HOST:$APP_HOME

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+  <title>收银台</title>
+  <script>
+    window.config = {};
+    if (${htmlWebpackPlugin.options.debug}) {
+      window.config.api = 'http://' + location.hostname + ':' + location.port;
+    } else {
+      window.config.api = '${htmlWebpackPlugin.options.api.merchant}';
+    }
+    window.config.commonApi = '${htmlWebpackPlugin.options.api.open}';
+  </script>
+</head>
+<body>
+<noscript>
+  您的浏览器需要启用JavaScript才能访问该网页.<br/>
+  You need to enable JavaScript to this app.
+</noscript>
+<div id="application">正在加载...</div>
+<script type="text/javascript" src="./config.js"></script>
+</body>
+</html>

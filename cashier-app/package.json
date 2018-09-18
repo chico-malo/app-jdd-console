@@ -1,0 +1,41 @@
+{
+  "name": "cashier",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node node_modules/react-native/local-cli/cli.js start",
+    "test": "jest"
+  },
+  "dependencies": {
+    "accounting": "^0.4.1",
+    "babel-polyfill": "^6.26.0",
+    "fs": "0.0.2",
+    "lokijs": "^1.5.3",
+    "md5": "^2.2.1",
+    "moment": "^2.22.1",
+    "prop-types": "^15.6.1",
+    "react": "16.3.2",
+    "react-native": "0.55.3",
+    "react-native-animatable": "^1.2.4",
+    "react-native-code-push": "^5.3.2",
+    "react-native-svg": "^6.3.1",
+    "react-navigation": "^1.5.11",
+    "react-navigation-redux-helpers": "^1.0.5",
+    "react-redux": "^5.0.7",
+    "reactnativecomponents": "^1.0.0-alpha.1",
+    "redux": "^4.0.0",
+    "redux-observable": "^0.18.0",
+    "rxjs": "^5.5.10",
+    "web-common": "https://gitee.com/shangfu/web-common.git"
+  },
+  "devDependencies": {
+    "babel-jest": "22.4.3",
+    "babel-preset-react-native": "4.0.0",
+    "babel-preset-react-native-stage-0": "^1.0.1",
+    "jest": "22.4.3",
+    "react-test-renderer": "16.3.2"
+  },
+  "jest": {
+    "preset": "react-native"
+  }
+}
